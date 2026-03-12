@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cathopedia</title>
+
+<style>
+
+body{
+background-image:url("fundo.jpg");
+background-repeat:repeat;
+background-size:cover;
+text-align:center;
+font-family:Georgia,"Times New Roman",serif;
+margin:0;
+}
+
+/* cabeçalho no canto superior esquerdo */
+
+.cabecalho{
+position:fixed;
+top:20px;
+left:20px;
+display:flex;
+align-items:center;
+gap:12px;
+z-index:1000;
+}
+
+.cabecalho img{
+width:45px;
+}
+
+.bloco-titulo{
+display:flex;
+flex-direction:column;
+}
+
+.titulo-principal{
+font-size:36px;
+color:#3b2a17;
+margin:0;
+line-height:1;
+}
+
+.subtitulo{
+font-size:13px;
+color:#444;
+white-space:nowrap;
+margin-top:3px;
+}
+
+/* imagem principal */
+
+.imagem-jesus{
+margin-top:120px;
+}
+
+.quadro-medieval{
+position:relative;
+display:inline-block;
+padding:15px;
+background:linear-gradient(135deg,#e0c27a,#8a6427,#d8b76a);
+border:6px solid #4b2f14;
+outline:3px solid #caa24d;
+box-shadow:10px 10px 18px rgba(0,0,0,0.45);
+}
+
+.quadro-medieval img{
+width:300px;
+display:block;
+border:4px solid #efe2c2;
+background-color:#f8f1e3;
+}
+
+.quadro-medieval::before,
+.quadro-medieval::after{
+content:"✠";
+position:absolute;
+font-size:28px;
+color:#6b471d;
+font-weight:bold;
+}
+
+.quadro-medieval::before{
+top:-10px;
+left:-10px;
+}
+
+.quadro-medieval::after{
+bottom:-10px;
+right:-10px;
+}
+
+/* área dos botões */
+
+.menu-botoes{
+margin-top:40px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:16px;
+}
+
+/* botões animados */
+
+.menu-botoes a{
+border:4px solid #3F3F3F;
+color:#3F3F3F;
+display:inline-block;
+font-size:18px;
+font-weight:bold;
+line-height:24px;
+padding:12px 32px 12px 82px;
+position:relative;
+text-decoration:none;
+background-color:rgba(255,255,255,0.75);
+min-width:220px;
+text-align:left;
+box-sizing:border-box;
+}
+
+.menu-botoes a .label,
+.menu-botoes a .icon-arrow{
+backface-visibility:hidden;
+transform:translateZ(0);
+perspective:1000;
+}
+
+.menu-botoes a .label{
+display:inline-block;
+transition:transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.menu-botoes a .icon-arrow{
+fill:#3F3F3F;
+height:15px;
+top:17px;
+transition:transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
+width:35px;
+}
+
+.menu-botoes a .icon-arrow.before{
+left:32px;
+margin-right:15px;
+position:absolute;
+transform-origin:left center;
+}
+
+.menu-botoes a .icon-arrow.after{
+margin-left:15px;
+opacity:0;
+position:absolute;
+right:32px;
+transform:translateX(75%) scaleX(0.1);
+transform-origin:right center;
+}
+
+.menu-botoes a:hover .label{
+transform:translateX(-52px);
+}
+
+.menu-botoes a:hover .icon-arrow.before{
+opacity:0;
+transform:translateX(-75%) scaleX(0.1);
+}
+
+.menu-botoes a:hover .icon-arrow.after{
+opacity:1;
+transform:translateX(0) scaleX(1);
+}
+
+.menu-botoes a:active{
+border-color:#FD6154;
+color:#FD6154;
+}
+
+.menu-botoes a:active .icon-arrow{
+fill:#FD6154;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cabecalho">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghz2_iYeYETG_eoj9-b05_OddVVE02x9uRdabDCWGus6bpb-jE_loBaTkRdFLfDsdUZ5HbfT-R3dHa-PsBXEfBuz5rb0WPyydX7PbWx0CZe7VJtRC7-qENIhwgYI9iiykKeqiPv2A-42KdiNVUAvY_nqZGeEXpxU-kxmqVDacQhh-MQ0jSA3-wiao/s320/1676590345744.jpg">
+
+<div class="bloco-titulo">
+<div class="titulo-principal">Cathopedia</div>
+<div class="subtitulo">A enciclopédia católica romana</div>
+</div>
+</div>
+
+<div class="imagem-jesus">
+<div class="quadro-medieval">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Christus_Rex.png" alt="Cristo Rei">
+</div>
+</div>
+
+<div class="menu-botoes">
+
+<a href="santos.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Santos</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+<a href="papas.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Papas</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+<a href="martires.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Mártires</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+<a href="beatos.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Beatos</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+<a href="reliquias.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Relíquias</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+<a href="milagres.html">
+<svg class="icon-arrow before" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+<span class="label">Milagres</span>
+<svg class="icon-arrow after" viewBox="0 0 35 15">
+<path d="M0,7.5 L30,7.5"></path>
+<path d="M22,1 L34,7.5 L22,14"></path>
+</svg>
+</a>
+
+</div>
+
+</body>
+</html>
