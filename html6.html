@@ -465,6 +465,94 @@ color:#f0d9a0;
 background-color:rgba(30,30,30,0.85);
 }
 
+/* paginação */
+.paginacao-area{
+margin-top:28px;
+margin-bottom:80px;
+display:flex;
+justify-content:center;
+}
+
+.join{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:0;
+}
+
+.join-horizontal{
+flex-direction:row;
+}
+
+.join-vertical{
+flex-direction:column;
+}
+
+.join-item{
+margin:0;
+border-radius:0;
+}
+
+.join-item:first-child{
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+}
+
+.join-item:last-child{
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+}
+
+.btn{
+border:2px solid #4b2f14;
+background-color:rgba(255,255,255,0.85);
+color:#3b2a17;
+padding:10px 18px;
+font-size:15px;
+font-family:Georgia,"Times New Roman",serif;
+font-weight:bold;
+cursor:pointer;
+min-width:48px;
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+background-color:#e8d2a2;
+}
+
+.btn-active{
+background-color:#8a6427;
+color:#fff7e6;
+border-color:#4b2f14;
+}
+
+.btn-disabled{
+background-color:rgba(220,220,220,0.8);
+color:#8a8a8a;
+cursor:not-allowed;
+}
+
+body.dark-mode .btn{
+background-color:rgba(30,30,30,0.9);
+color:#f1f1f1;
+border-color:#d4af37;
+}
+
+body.dark-mode .btn:hover{
+background-color:#4a3a1a;
+}
+
+body.dark-mode .btn-active{
+background-color:#d4af37;
+color:#1b1b1b;
+border-color:#d4af37;
+}
+
+body.dark-mode .btn-disabled{
+background-color:rgba(60,60,60,0.85);
+color:#8f8f8f;
+}
+
 #player{
 position:fixed;
 left:-9999px;
@@ -611,6 +699,15 @@ onkeyup="filtrarMenu()"
 
 </div>
 
+<div class="paginacao-area">
+  <div class="join join-horizontal" id="paginacao">
+    <button class="join-item btn" onclick="selecionarPagina(1)">1</button>
+    <button class="join-item btn btn-active" onclick="selecionarPagina(2)">2</button>
+    <button class="join-item btn" onclick="selecionarPagina(3)">3</button>
+    <button class="join-item btn" onclick="selecionarPagina(4)">4</button>
+  </div>
+</div>
+
 <div id="player"></div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -704,6 +801,14 @@ function filtrarMenu() {
     } else {
         mensagem.style.display = "none";
     }
+}
+
+function selecionarPagina(numero) {
+    const botoes = document.querySelectorAll("#paginacao .btn");
+    botoes.forEach(function(botao) {
+        botao.classList.remove("btn-active");
+    });
+    botoes[numero - 1].classList.add("btn-active");
 }
 
 let player;
