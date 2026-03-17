@@ -1,69 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lista de Santos</title>
+
 <style>
 
+/* fundo da página */
+
 body{
-background-color:white; /* fundo branco */
+background-color:white;
+text-align:center;
 font-family:Arial;
 margin:0;
-padding-top:80px; /* espaço para o topo */
 }
 
-/* HEADER SUPERIOR */
-.topo{
+/* cabeçalho Cathopedia */
+
+.cabecalho{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-background-color:white;
+top:15px;
+left:15px;
+}
+
+/* link do logotipo */
+
+.cabecalho a{
 display:flex;
 align-items:center;
-padding:10px 20px;
-border-bottom:1px solid #ccc;
-z-index:1000;
+gap:10px;
+text-decoration:none;
 }
 
-.topo img{
-width:40px;
-margin-right:10px;
+/* símbolo */
+
+.cabecalho img{
+width:35px;
 }
 
-.topo span{
-font-weight:bold;
-font-size:18px;
-}
+/* bloco do título */
 
-/* CONTEÚDO */
-.santo{
-margin-bottom:30px;
-padding:0 20px;
-}
-
-.santo h3{
-margin-bottom:10px;
-background-color:white;
-display:inline-block;
-padding:8px 12px;
-border-radius:5px;
-border:1px solid #ddd;
-}
-
-.conteudo{
+.titulo-bloco{
 display:flex;
-align-items:flex-start;
+flex-direction:column;
 }
 
-.conteudo img{
-width:300px;
-margin-right:20px;
-border-radius:5px;
+/* texto Cathopedia */
+
+.titulo-bloco h2{
+margin:0;
+font-size:26px;
+color:#3b2a17;
+font-family:Georgia,"Times New Roman",serif;
 }
 
-.texto{
-width:500px;
-min-height:200px;
-padding:10px;
-background-color:white;
-border-radius:5px;
-border:1px solid #ddd;
+/* subtítulo pequeno */
+
+.subtitulo{
+font-size:11px;
+color:#444;
+font-family:Georgia,"Times New Roman",serif;
+margin-top:2px;
+white-space:nowrap;
+}
+
+/* título da página */
+
+h1{
+margin-top:100px;
+}
+
+/* menu */
+
+nav ul{
+list-style:none;
+padding:0;
+}
+
+nav a{
+font-size:20px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+/* imagens */
+
+img{
+margin-bottom:30px;
 }
 
 </style>
@@ -72,16 +95,85 @@ border:1px solid #ddd;
 
 <body>
 
-<!-- TOPO COM SÍMBOLO -->
-<div class="topo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Globus_cruciger.svg/512px-Globus_cruciger.svg.png">
-<span>A enciclopédia Romana</span>
+<!-- logotipo Cathopedia clicável -->
+
+<div class="cabecalho">
+
+<a href="file:///C:/Users/joao/Desktop/cathopedia/html6.html">
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghz2_iYeYETG_eoj9-b05_OddVVE02x9uRdabDCWGus6bpb-jE_loBaTkRdFLfDsdUZ5HbfT-R3dHa-PsBXEfBuz5rb0WPyydX7PbWx0CZe7VJtRC7-qENIhwgYI9iiykKeqiPv2A-42KdiNVUAvY_nqZGeEXpxU-kxmqVDacQhh-MQ0jSA3-wiao/s320/1676590345744.jpg">
+
+<div class="titulo-bloco">
+
+<h2>Cathopedia</h2>
+
+<div class="subtitulo">
+A enciclopédia católica romana
 </div>
 
-<nav style="padding:20px;">
+</div>
+
+</a>
+
+</div>
+
+<nav>
+
 <h1>LISTA DE SANTOS CATÓLICOS</h1>
 
 <ul>
-<li><a href="menu%20principal.html">Voltar</a></li>
+<li><a href="file:///C:/Users/joao/Desktop/cathopedia/html6.html">Voltar</a></li>
 </ul>
+
 </nav>
+
+<p>Nossa Senhora (Mãe de Deus)</p>
+<img src="https://alchetron.com/cdn/theotokos-b6d0cc0e-0454-4bf4-94f6-ce8e3ebce64-resize-750.jpeg" width="300">
+
+<p>São Miguel (Arcanjo)</p>
+<img src="https://cdn.ruwiki.ru/commonswiki/files/4/49/Poulakis_Theodoros_-_The_archangel_Michael_-_Google_Art_Project.jpg" width="300">
+
+<p>São Gabriel</p>
+<img src="https://st2.depositphotos.com/26016684/42587/i/450/depositphotos_425871486-stock-illustration-icon-archangel-gabriel.jpg" width="300">
+
+<p>São Rafael</p>
+<img src="https://static.insales-cdn.com/images/products/1/2810/433269498/595.jpg" width="300">
+
+<p>Anjo da Guarda</p>
+<img src="https://azbyka.ru/wp-content/uploads/2015/07/angel-hranitel-1.jpg" width="300">
+
+<p>São Mateus</p>
+<img src="https://tse1.explicit.bing.net/th/id/OIP.XpRubvX_YWbxPlfrQSCVawHaJG?w=570&h=700&rs=1&pid=ImgDetMain&o=7&rm=3" width="300">
+
+<p>São Marcos</p>
+<img src="https://www.krestilnoe.ru/userfiles/ufiles/083.jpg" width="300">
+
+<p>São Lucas</p>
+<img src="https://i.pinimg.com/originals/0e/bd/a9/0ebda9e7619042a107d180d1e64235c7.jpg" width="300">
+
+<p>São João (Apóstolo)</p>
+<img src="https://tse3.mm.bing.net/th/id/OIP.8OjIeNMDU8Ja74AYHyLmOwHaI3?w=565&h=677&rs=1&pid=ImgDetMain&o=7&rm=3" width="300">
+
+<p>São Matias</p>
+<img src="https://tse2.mm.bing.net/th/id/OIP.I63W_BIfB5T5CA8-z4MbQwHaKD?rs=1&pid=ImgDetMain&o=7&rm=3" width="300">
+
+<p>São João Batista</p>
+<img src="https://fasbam.edu.br/wp-content/uploads/2019/07/Sa%CC%83o-Joa%CC%83o-Batista-Precursor.jpg" width="300">
+
+<p>Santo Elias</p>
+<img src="https://sunlight.net/wiki/wp-content/uploads/2023/02/Ikona-Ili-Proroka.jpg" width="300">
+
+<p>Santo André</p>
+<img src="https://static.insales-cdn.com/images/products/1/3876/545902372/svyatoj_apostol_andrej_pervozvannyj.jpg" width="300">
+
+<p>São Pedro e São Paulo</p>
+<img src="https://shop.iconostas.ru/upload/resize_cache/iblock/d51/341_521_1/d51ba443e9954b4dffe693652a5382c0.jpg" width="300">
+
+<p>Santa Teresa de Lisieux</p>
+<img src="https://diocesedivinopolis.org.br/wp-content/uploads/2025/09/Santa-Terezinha.png" width="300">
+
+<p>Santa Maria Goretti</p>
+<img src="https://cdn.conventodapenha.org.br/wp-content/uploads/2018/07/04155646/Santa-Maria-Goretti.jpg" width="300">
+
+</body>
+</html>
