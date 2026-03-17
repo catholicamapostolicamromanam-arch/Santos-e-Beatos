@@ -5,9 +5,9 @@
 
 	<style>
 		body {
-			background-color: white; /* fundo branco */
+			background-color: white;
 			margin: 0;
-			padding-top: 70px; /* espaço para o topo */
+			padding-top: 90px; /* espaço para o topo */
 			font-family: Arial;
 		}
 
@@ -25,14 +25,20 @@
 			z-index: 1000;
 		}
 
-		.topo img {
-			width: 35px;
-			margin-right: 10px;
+		.logo-container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 		}
 
-		.topo span {
+		.logo-container img {
+			width: 40px;
+		}
+
+		.logo-container span {
+			font-size: 12px;
 			font-weight: bold;
-			font-size: 16px;
+			margin-top: 2px;
 		}
 
 		nav {
@@ -44,18 +50,18 @@
 </head>
 <body>
 
-<!-- TOPO COM SÍMBOLO -->
+<!-- TOPO -->
 <div class="topo">
-	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Globus_cruciger.svg/512px-Globus_cruciger.svg.png">
-	<span>A enciclopédia Romana</span>
+	<div class="logo-container">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Globus_cruciger.svg/512px-Globus_cruciger.svg.png">
+		<span>A enciclopédia católica romana</span>
+	</div>
 </div>
 
 <nav>
 	<ul>
 		<li>
-			<a href="file:///C:/Users/joao/Desktop/Nova%20pasta%20(2)/menu%20principal.html">
-				Voltar
-			</a>
+			<a href="html6.html">Voltar</a>
 		</li>
 	</ul>
 </nav>
