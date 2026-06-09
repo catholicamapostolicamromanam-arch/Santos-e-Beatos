@@ -67,14 +67,13 @@ body.dark-mode .quadro-medieval::after{
 color:#d4af37;
 }
 
-.cabecalho{
-position:fixed;
-top:20px;
-left:20px;
-display:flex;
-align-items:center;
-gap:12px;
-z-index:1000;
+.logo-globo{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:80px;
+    height:auto;
+    z-index:1000;
 }
 
 .cabecalho img{
@@ -534,14 +533,7 @@ pointer-events:none;
 
 <body>
 
-<div class="cabecalho">
-<<img src="globo3.png" alt="Minha Imagem">
-
-<div class="bloco-titulo">
-<div class="titulo-principal" id="tituloPrincipal">Cathopedia</div>
-<div class="subtitulo" id="subtitulo">A enciclopédia católica romana</div>
-</div>
-</div>
+<img src="globo3.png" alt="Globo Católico" class="logo-globo">
 
 <div class="botao-noturno" onclick="alternarModoNoturno()" id="botaoNoturno" title="Alternar modo noturno">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-highlights" viewBox="0 0 16 16">
@@ -628,7 +620,7 @@ onkeyup="filtrarMenu()"
 </svg>
 </a>
 
-<a href="beatos..html" data-nome-pt="Beatos" data-nome-en="Blesseds">
+<a href="beatos.html" data-nome-pt="Beatos" data-nome-en="Blesseds">
 <svg class="icon-arrow before" viewBox="0 0 35 15">
 <path d="M0,7.5 L30,7.5"></path>
 <path d="M22,1 L34,7.5 L22,14"></path>
